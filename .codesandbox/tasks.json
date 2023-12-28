@@ -1,0 +1,24 @@
+{
+  "setupTasks": [
+    {
+      "name": "Install Dependencies",
+      "command": "yarn install"
+    }
+  ],
+
+  "tasks": {
+    "bundle-client": {
+      "name": "Bundle Client",
+      "command": "yarn bundle",
+      "runAtStart": true
+    },
+    "dev-server": {
+      "name": "Dev Server",
+      "command": "yarn dev",
+      "runAtStart": true,
+      "preview": {
+        "port": 5555
+      }
+    }
+  }
+}
