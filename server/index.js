@@ -7,8 +7,8 @@ const app = express();
 
 app.use('/public', express.static('build'))
 
-app.get('/', (req, res) => {
-  const { pipe } = renderToPipeableStream(<App />, {
+app.use('/', (req, res) => {
+  const { pipe } = renderToPipeableStream(<App url={req.url} />, {
     // bootstrapScripts: ['/public/main.js'],
     onShellReady() {
       res.setHeader('content-type', 'text/html');
@@ -17,20 +17,5 @@ app.get('/', (req, res) => {
   })
 })
 
-
-app.get('/getData', (req, res) => {
-  setTimeout(() => {
-    res.send(JSON.stringify([
-      {
-        id: 1,
-        title: '1'
-      },
-      {
-        id: 2,
-        title: '2',
-      }
-    ]))
-  }, 1000)
-})
 
 app.listen(5555)
