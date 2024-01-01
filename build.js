@@ -1,9 +1,13 @@
-import webpack from 'webpack'
-import path from 'path'
-// const ReactServerWebpackPlugin = require('react-server-dom-webpack/plugin');
-import ReactServerWebpackPlugin from 'react-server-dom-webpack/plugin'
+const webpack = require('webpack')
+const path = require('path')
+const ReactServerWebpackPlugin = require('react-server-dom-webpack/plugin')
 
-const __dirname = path.dirname(new URL(import.meta.url).pathname);
+// import webpack from 'webpack'
+// import path from 'path'
+// // const ReactServerWebpackPlugin = require('react-server-dom-webpack/plugin');
+// import ReactServerWebpackPlugin from 'react-server-dom-webpack/plugin'
+
+// const __dirname = path.dirname(new URL(import.meta.url).pathname);
 webpack({
   mode: 'development',
   entry: path.resolve(__dirname, '/app/client/bootstrap.js'),

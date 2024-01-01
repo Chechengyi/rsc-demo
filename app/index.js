@@ -2,7 +2,7 @@ import React, { Suspense } from 'react'
 import { readdir, readFile } from "node:fs/promises";
 import path from 'path';
 
-const __dirname = path.dirname(new URL(import.meta.url).pathname);
+import { FileButtonList } from './FileButtonLst.js'
 
 
 function getFileContent(filePath) {
@@ -59,11 +59,12 @@ export default async function App(props) {
     <div>
       <span>搜索：</span><input />
       <hr />
-      <div>
+      {/* <div>
         {
           dataFiles.map((item) => <a key={item} href={`/${item}`} style={{ marginLeft: 10 }}>{item}</a>)
         }
-      </div>
+      </div> */}
+      <FileButtonList fileList={dataFiles} />
       <div>
         filename: {urlFileName}
         {
