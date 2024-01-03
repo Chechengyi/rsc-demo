@@ -2,22 +2,10 @@ import React from 'react'
 import express from 'express';
 import { readFileSync } from 'fs';
 import path from 'path';
-// import babelRegister from '@babel/register';
 
 import App from '../app/index.js'
 
 import { renderToPipeableStream } from 'react-server-dom-webpack/server';
-
-// import register from 'react-server-dom-webpack/node-register';
-
-// register()
-// babelRegister({
-//   ignore: [/[\\\/](build|server|node_modules)[\\\/]/],
-//   presets: [['@babel/preset-react', {runtime: 'automatic'}]],
-//   plugins: ['@babel/transform-modules-commonjs'],
-// })
-
-// const __dirname = path.dirname(new URL(import.meta.url).pathname);
 
 
 const app = express();
