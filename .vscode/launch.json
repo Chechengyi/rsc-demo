@@ -7,12 +7,12 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "start server",
+      "name": "start ssr server",
       "skipFiles": [
         "<node_internals>/**"
       ],
       "runtimeExecutable": "yarn",
-      "args": ["dev"],
+      "args": ["dev-ssr"],
       "outFiles": [
         "!**/node_modules/**"
       ],

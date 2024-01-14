@@ -1,12 +1,12 @@
 {
-  "name": "ssr-suspense",
+  "name": "rsc-demo",
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "bundle": "nodemon ./build.js",
-    "dev": "nodemon --conditions react-server server"
+    "dev-rsc": "SERVER_TARGET=rsc nodemon --conditions react-server server",
+    "dev-ssr": "SERVER_TARGET=ssr nodemon server"
   },
   "author": "",
   "license": "MIT",
@@ -18,22 +18,16 @@
     "babel-loader": "^9.1.3",
     "express": "^4.18.2",
     "nodemon": "^2.0.22",
-    "react": "18.3.0-next-1308e49a6-20230330",
-    "react-dom": "18.3.0-next-1308e49a6-20230330",
-    "react-server-dom-webpack": "18.3.0-next-1308e49a6-20230330",
+    "react": "18.3.0-canary-1d5667a12-20240102",
+    "react-dom": "18.3.0-canary-1d5667a12-20240102",
+    "react-server-dom-webpack": "18.3.0-canary-1d5667a12-20240102",
     "webpack": "^5.89.0"
-  },
-  "babel": {
-    "presets": [
-      [
-        "@babel/preset-react",
-        {
-          "runtime": "automatic"
-        }
-      ]
-    ]
   },
   "engines": {
     "node": ">20.0.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.23.8",
+    "babel-plugin-transform-commonjs": "^1.1.6"
   }
 }

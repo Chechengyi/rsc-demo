@@ -1,17 +1,21 @@
+## 安装依赖
+```
+yarn
+```
 
-## client 端打包
-```bash
+分别用三个 terminal
+
+1 启动 rsc 服务
+```
+yarn dev-rsc
+```
+
+2 启动 ssr 服务
+```
+yarn dev-ssr
+```
+
+3 打包 client 端代码
+```
 yarn bundle
 ```
-
-## server 端启动
-```bash
-yarn dev
-```
-
-
-访问 localhost:5555/
-server 端使用的是 `renderToPipeableStream` 
-
-访问 localhost:5555/renderToString
-server 端使用的是 `renderToString`
